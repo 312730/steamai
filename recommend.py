@@ -13,7 +13,7 @@ early_stop = keras.callbacks.EarlyStopping(monitor='binary_accuracy', min_delta=
 
 
 filename = 'final_model.sav'
-ncf = pickle.load(open('final_model.sav', 'rb', errors = 'ignore'))
+ncf = pickle.load(open('final_model.sav', 'rb'))
 
 def recommend_game (uid, model, n=10):
     uid_array = np.repeat(uid, game_coding.game_id.size)
